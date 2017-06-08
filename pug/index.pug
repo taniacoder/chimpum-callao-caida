@@ -1,0 +1,218 @@
+html
+	head
+		include base/head.pug
+		link(rel="shortcut icon",href="http://larepublica.pe/favicon.ico")
+		<!--(icono)-->
+		link(href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css",rel="stylesheet")
+		<!--(highcharts)-->
+		script(src='https://code.highcharts.com/highcharts.js')
+		script(src='https://code.highcharts.com/modules/exporting.js')
+		<!--(estilos)-->	
+		link(rel="stylesheet",type="text/css",href="css/main.css")
+
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-6536106-1', 'auto');
+			ga('send', 'pageview');
+
+	body
+		#fb-root
+		script.
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v2.8";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		nav#topNav.navbar.navbar-default.navbar-fixed-top
+			.container-fluid
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-navbar')
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand.page-scroll(href='#first')
+						img(src='images/logo-callao-01.png', width='154px')
+				#bs-navbar.navbar-collapse.collapse
+					ul.nav.navbar-nav
+						li
+							a.page-scroll(href='#one') Intro
+						li
+							a.page-scroll(href='#two')
+								| Organigrama 
+								i.fa.fa-sitemap.fa-lg(aria-hidden='true')
+						li
+							a.page-scroll(href='#three')
+								| Estadisticas 
+								i.fa.fa-area-chart.fa-lg(aria-hidden='true')
+						li
+							a.page-scroll(href='#four')
+								| linea de tiempo 
+								i.fa.fa-arrows-h.fa-lg(aria-hidden='true')
+						li
+							a.page-scroll(href='#last')
+								| mapa 
+								i.fa.fa-map.fa-lg(aria-hidden='true')
+					ul.nav.navbar-nav.navbar-right
+						li
+							.btn-redes
+								.share-buttons-square
+									span.fb
+										a.fb-share-button(href='javascript: void(0);', onclick="window.open('http://www.facebook.com/sharer.php?u=http://larepublica.pe/data/caso-jose-yactayo/','ventanacompartir', 'toolbar=0, status=0, width=650, height=450');")
+											i.fa.fa-facebook(aria-hidden='true')
+										//
+											a.fb-share-button.fb-icon.popup-fb(href='https://www.facebook.com/sharer.php?u=http://larepublica.pe/data/caso-jose-yactayo/', target="_blank", data-layout='button_count')
+											i.fa.fa-facebook(aria-hidden='true')
+									span.twiter
+										a.fa.fa-twitter(aria-hidden='true', href='https://twitter.com/share', data-text='Secuelas Perpetuas | Mujeres shipibas y quechuas que sufrieron el impune crimen de las esterilizaciones forzadas', data-via='larepublica_pe', data-size='default', data-hashtags='EsterilizacionesForzadas')
+										script.
+											!function(d,s,id){
+											var js,
+											fjs=d.getElementsByTagName(s)[0],
+											p=/^http:/.test(d.location)
+											?'http'
+											:'https';
+											if(!d.getElementById(id)){
+											js=d.createElement(s);
+											js.id=id;
+											js.src=p+'://platform.twitter.com/widgets.js';
+											fjs.parentNode.insertBefore(js,fjs);}
+											}(document, 'script', 'twitter-wjs');
+						li
+							a.page-scroll(data-toggle='modal', title='A free Bootstrap video landing theme', href='#aboutModal')
+								img(src='images/logo_lr.png', width='154px')
+		header#first
+			.header-content
+				.inner
+					img(src='images/logo-callao-01.png', width='60%')
+					h2
+						| Veintidós años gobernando la región suman casos de corrupción que golpean al controversial movimiento político, que pasa de las urnas a los tribunales.
+					hr
+			.fillWidth.fadeIn.wow.collapse.in
+				img.mySlides.video-background(src='images/slide0.jpg')
+				img.mySlides.video-background(src='images/slide1.jpg')
+				img.mySlides.video-background(src='images/slide2.jpg')
+				img.mySlides.video-background(src='images/slide3.jpg')
+		section#one.bg-primary
+			.container
+				.row
+					.col-lg-6.col-lg-offset-3.col-md-8.col-md-offset-2.text-center
+						h2.margin-top-0.text-primary Built On The Bootstrap Grid
+						br
+						p.text-faded
+							| Bootstrap's responsive grid comes in 4 sizes or "breakpoints": tiny (xs), small(sm), medium(md) and large(lg). These 4 grid sizes enable you create responsive layouts that behave accordingly on different devices.
+						.text-center
+							iframe(width="560" height="315" src="https://www.youtube.com/embed/JokzHiOjpj4?ecver=1" frameborder="0" allowfullscreen)
+						a.btn.btn-default.btn-xl.page-scroll(href='#three') Learn More
+		section#two
+			.container
+				.row
+					.col-lg-12.text-center
+						h2.margin-top-0.text-primary Directivos afiliados (según el Registro de Organizaciones Políticas)
+						hr.primary
+			.container.text-center
+				include base/svg.pug
+		section#three
+			.container
+				h2.text-primary Votaciones de elecciones provinciales y regionales
+				.row
+					.col-md-6
+						#container(style='min-width: 310px; height: 400px; margin: 0 auto')
+					.col-md-6
+						#container-1(style='min-width: 310px; height: 400px; margin: 0 auto')
+		section#four.container-fluid.no-padding
+			.container
+				h2.text-primary Diez momentos en la historia de Chimpum Callao 
+			div
+				img(src='images/time-line.jpg')
+		section#last
+			.mapa
+				.container
+					h2.text-primary Autoridades chalacas electas por Chimpum Callao
+					.row
+						.col-md-7
+							svg#canada-map(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewbox='0 0 705 668', cy='300', r='400')
+								g#Alberta
+									title Juan Sotomayor García, alcalde provincial del Callao
+									desc
+										image(xlink:href='callao.jpg', scr='asstes/callao.jpg', alt='A lake surrounded by mountains')
+										p
+											| Retirado de movimiento Chimpum en 2012 por el caso del chuponeo, formó su partido Vamos Perú. En el 2014 ambos grupos fueron en alianza con el nombre Chimpum. La Fiscalía lo investiga por presunta interceptación telefónica ilegal y en el Callao archivó el caso del reparto de panetones con su nombre y foto presuntamente con vehículo municipal.
+									path(d='M232.927,279.57c-2.651,0.097-20.878-1.155-19.094,4.488c2.412,7.628,5.131,15.22,7.252,22.932c4.212,15.315,7.256,29.796,7.924,45.573c0.725,17.135,0.158,33.762-0.622,50.917c-0.319,7.015-0.915,13.188-2.251,20.078c-1.675,8.639-4.162,15.296-7.708,23.399c-2.532,5.783-6.039,11.171-8.865,16.822c-3.512,7.024-8.225,11.026-14.25,16.011c-1.813,1.5-0.813,5.03-0.813,7.242c0,5.121,0,10.243,0,15.365c0,3.847-0.137,3.602,3.843,3.602c3.535,0,7.069,0,10.604,0c-0.252,5-0.509,10.719-1.457,16.23c-2.104-2.297-4.208-4.706-6.313-7.003c-2.606,6.668-4.365,13.573-6.373,20.441c-0.835,2.854-0.512,5.771-0.512,8.737c0,0.688-7.617,0.302-8.654,0.302c0.428,0.78,3.247,5.008,2.733,5.476c-2.303,2.083-4.607,4.164-6.911,6.248c-3.682,3.332-8.015,6.072-11.997,9.035c2.16,1.31,4.505,2.239,5.862,4.392c2.201,3.493,3.464,2.153,7.498,1.42c7.32-1.329,11.052-1.033,18.364,0.592c10.304,2.292,20.436,3.455,31.065,3.455c-3.093-5.15-5.659-11.254-5.827-17.427c-0.182-6.682,3.783-5.753,8.918-6.73c15.174-2.886,30.348-5.771,45.521-8.658c15.643-2.975,31.285-5.949,46.928-8.924c3.731-0.709,7.48-1.172,11.248-1.675c4.231-0.565,8.462-1.13,12.692-1.695c2.351-0.315,4.259-3.782,5.795-5.474c-5.143-3.002-6.067-3.359-11.942-2.323c-3.686,0.649-7.458,0.323-11.138,0.903c-9.16,1.444-18.338,2.578-27.541,3.721c0.123-5.763-0.596-11.087,0.803-16.689c1.149-4.597,9.968-7.038,13.885-8.438c-2.145-2.413-6.662-5.755-7.768-8.741c-1.41-3.807,1.227-7.827,3.25-10.639c5.26-7.304,9.616-14.513,12.329-23.191c0.93-2.977,3.896-7.065,2.308-9.605c-2.887-4.621-5.16-7.237-9.323-10.759c-2.782-2.352-4.178-7.107-5.274-10.527c-1.195-3.729-8.087-0.438-10.088,1.182c-1.648-3.324-4.033-5.837-5.827-9.007c-0.387-0.683-0.934-3.628-1.715-3.628c-2.669,0-5.338,0-8.007,0c-3.083,0-4.544-4.37-6.14-6.738c-3.297-4.895-6.91,0.273-9.562,2.666c-1.095,0.986-7.957,1.64-8.677,0.56c-1.548-2.322-6.443-7.247-6.443-9.982c0-4.976,0.302-5.916,3.24-9.916c2.584-3.519,3.591-6.711,4.995-10.896c1.044-3.116,3.351-5.365,4.352-8.54c1.306-4.144,2.228-7.695,2.49-12.038c0.264-4.396-1.618-5.94-4.242-9.537c-1.737-2.38-9.021,0.035-10.834-2.158c-1.036-1.254-0.259-8.926,0-10.683c0.463-3.136,3.684-7.327,2.842-10.425c-2.175-7.998-2.363-15.787-5.947-23.13c-2.871-5.881-8.225-10.426-12.007-15.927c-1.846-2.686-3.734-5.212-5.78-7.751c-0.479-0.593-0.966-2.727-1.165-2.733C236.711,279.705,234.819,279.637,232.927,279.57z')
+								g#Nova_Scotia
+									title Raúl Odar Cabrejos, alcalde de Carmen de la Legua-Reynoso
+									desc
+										image(xlink:href='reynoso.jpg', alt='A lighthouse at dusk, shot from below, with rocks in the foreground')
+										p
+											| Cuestionado porque su constructora Vama fue proveedora del municipio de Carmen de la Legua y del Gobierno Regional del Callao, en ambos casos durante las gestiones de Moreno. Cuando cobraba al Gobierno Regional, Odar era regidor del distrito por Chimpum.
+									path(d='M343.292,500.608c-0.268,2.802-2.705,12.805,0.063,14.581c2.417,1.552,4.798,1.8,3.399,4.648c-1.596,3.25-2.503,2.714-6.086,3.119c-11.256,1.271-22.494,2.705-33.736,4.086c-0.145-5.021-0.325-10.04-0.325-15.064c0-3.739,5.724-6.603,8.88-7.797c5.498-2.082,8.951-2.968,14.864-2.612C334.183,501.799,340.311,503.813,343.292,500.608z')
+								g#Northwest_Territories
+									title Ivan Rivadeneyra Medina, alcalde Bellavista
+									desc
+										image(xlink:href='bellavista.jpg', alt='Rust-red houseboats on a blue river')
+										p
+											| Directivo de Chimpum, según registro en el JNE. Es investigado por presunta malversación de fondos. Según la Procuraduría Anticorrupción del Callao se apropió de gratificaciones de trabajadores municipales y descuentos a funcionarios por un préstamo de cooperativas.
+									path(d='M330.824,532.991c0.286,7.813,0.908,15.633,0.369,23.436c-0.389,5.623-15.277,3.706-19.313,3.983c-15.095,1.033-29.804,3.354-44.794,5.185c-10.722,1.312-21.45,2.569-32.179,3.824c-0.646,0.074-5.498,1.042-5.679,0.408c-1.217-4.272-2.404-8.066-2.604-12.491c-0.29-6.44,3.672-5.425,8.826-6.396c9.272-1.744,18.544-3.489,27.817-5.234C285.786,541.467,308.305,537.229,330.824,532.991z')
+								g#Nunavut
+									title Patricia Chirinos Venegas, alcaldesa de La Perla
+									desc
+										image(xlink:href='laperla.jpg', alt='Yellow buildings against a frozen ocean')
+										p
+											| Renunció a Chimpum en febrero último. Cuestionada porque su municipio recibió donaciones de Odebrecht. Según el municipio, se debieron a los daños causados al distrito por la Costa Verde del Callao. Apuntaría a la provincial por APP. Llegó a Chimpum luego de estar en MAR Callao, de su padrastro Rogelio Canches, entonces líder opositor a Chimpum.
+									path(d='M293.496,561.787c-1.295,4.193-2.205,7.317-2.205,11.667c0,1.142,0.613,4.277,0.263,5.344c-0.513,1.561-2.531,3.015-3.466,4.429c-2.183,3.303-4.676,6.216-8.086,8.273c-2.67,1.611-8.444,4.777-7.43,8.5c-16.948-7.275-32.478-17.714-49.534-24.675c2.777-0.191,5.553-0.383,8.33-0.573c-0.689-1.561-1.38-3.119-2.07-4.68C250.643,567.342,272.093,563.832,293.496,561.787z')
+								g#Ontario
+									title Ontario
+									desc
+										image(xlink:href='parliament-hill-ottawa.jpg', alt='Old buildings of Parliament Hill reflected in a curve of the Ottawa river during fall')
+										p
+											| Canada’s most populous province, with nearly 40% of the population, much of it clustered around Lake Ontario and in the city of Toronto, Canada’s largest city. Ontario also holds the nation’s capital of Ottawa.
+									path(d='M169.464,565.465c-1.171,1.075-2.469,2.819-3.869,3.55c-1.617,0.846-3.384,0.653-4.955,1.719c-4.145,2.812-5.418,0.81-8.309-2.667c-3.989,3.771-8.587,9.01-10.333,14.271c-0.355,1.062,0.514,3.815,1.458,4.371c1.7,1,1.428-0.077,3.277-0.973c2.426-1.177,2.884-1.743,5.798-1.397c1.448,0.171,1.548,2.323,2.849,2.584c4.18,0.836,8.285,0.266,12.475-0.398c4.195-0.665,5.652-2.74,7.458-6.55c1.287-2.717-2.237-6.125,0.245-8.442C177.573,569.651,170.334,565.985,169.464,565.465z')
+								g#Prince_Edward_Island.active
+									title Omar Marcos Arteaga, alcalde de Ventanilla
+									desc
+										image(xlink:href='ventanilla.jpg', alt='A beach boardwalk through pink grass')
+										p
+											| Renunció a Chimpum en el 2015, alegando falta de apoyo del Gobierno Regional, pero otro motivo sería que la alianza electoral con Vamos Perú evitó que tiente la alcaldía provincial. Alista su movimiento Fuerza Chalaca con miras a la provincial. Es investigado por presunto enriquecimiento ilícito: según un fiscal, tiene desbalance patrimonial de unos 663 mil soles.
+									path(d='M212.89,281.777c-1.269-8.15-1.616-15.623-5.767-22.759c-3.852-6.621-0.903-15.052-2.399-22.221c-1.22-5.849-4.728-15.535-8.889-19.627c-7.198-7.076-0.583-11.734,2.18-19.188c1.93-5.205-7.855-14.014-10.208-18.149c-2.352-4.131-4.703-8.263-7.055-12.394c-1.081-1.901-5.178-6.021-5.178-7.734c0-6.022,1.619-16.823-1.439-22.164c-4.427-7.731-7.391-14.708-10.37-23.118c-5.424-15.318-13.064-26.862-25.312-37.569c-2.515-2.2-4.838-1.717-7.635-3.636c-4.686-3.213-6.151-3.308-11.897-3.308c-2.532,0-8.013-1.511-8.013-4.122c0-2.664,0.435-2.685-2.206-2.685c-0.826,0-6.303,0.373-6.303-0.319c0-5.15-0.369-6.683,2.98-10.481c3.117-3.534,4.107-4.205,0.456-8.016c-3.84-4.008-3.436-5.215-3.436-10.861c0-5.263,4.056-0.943,7.731-2.489c3.967-1.668,3.84-4.939,8.521-4.939c4.258,0,8.515,0,12.774,0c7.057,0,14.113,0,21.17,0c3.726,0,7.452,0,11.177,0c1.896,0,6.671-5.169,8.837-6.325c2.596-1.385,6.278-4.675,9.206-4.675c4.265,0,8.531,0,12.796,0c2.965,0,6.225-2.511,9.044-2.037c4.159,0.7,8.187,1.611,12.282,2.611c3.206,0.782,5.598-0.905,8.771-1.492c5.22-0.964,6.995-0.637,11.994,0.382c2.905,0.592,5.609,0.608,8.165,3.145c3.06,3.038,6.121,6.082,9.181,9.119c3.638,3.61,7.293,7.226,10.931,10.837c2.972,2.949,2.521,3.871,2.521,8.312c0,3.416,0,6.831,0,10.246c0,5.138,3.22,4.083,5.629,8.002c2.335,3.798,5.569,0.564,7.96,3.213c1.165,1.29-0.004,9.094-0.004,11.248c0,2.546-0.496,5.541-1.804,7.761c2.318,0.881,4.383,1.694,6.492,2.982c1.221,0.745,0.177,4.742,1.007,6.352c1.264,2.454,1.521,4.1,4.723,3.541c2.727-0.475,5.998-0.935,7.998-1.543c0,3.992,0,7.983,0,11.975c0,2.039-1.052,10.971,0.42,12.313c5.554,5.066,10.111,10.348,14.094,16.302c2.842,4.251,2.377,5.599,2.766,10.646c0.156,2.027,0.723,4.813,1.58,6.787c1.017,2.343,0.203,5.391,1.385,7.366c0.629,1.05,0.586,6.213,0.607,7.676c0.031,2.117-0.833,4.465-0.504,6.536c0.605,3.826,1.5,8.604,2.625,12.278c1.652,5.396,2.282,5.933-1.032,10.422c-3.144,4.257-4.94,6.168-4.94,11.968c0,2.186,0,4.372,0,6.558c0,0.89,4.035,1.762,4.886,2.076c0.929,0.342,0.458,3.925,0.458,4.857c0,1.968-1.868,2.852-3.296,4.114c-3.044,2.69-6.435,9.051-6.435,13.182c0,4.746-2.588,7.092-6.467,9.388c-2.972,1.761-7.09,3.505-8.736,6.799c-2.074,4.144-1.518,8.845-1.334,13.262c0.225,5.418-0.278,6.219,4.778,8.299c3.58,1.473,4.709,4.49,5.625,8.117c1.952,7.727,2.216,15.402,3.884,23.402c-4.336,0-8.672,0-13.006,0c-3.906,0-10.086-4.889-13.633-6.574c-4.021-1.912-8.15-3.719-12.23-5.502c-3.28-1.433-7.599-1.115-10.458-2.73c-4.115-2.327-8.907-4.545-12.179-8.097c-1.451-1.575-2.502-3.828-3.678-5.619c-1.229-1.873-4.089-2.669-6.035-3.682c-2.811-1.462-10.284-0.03-13.587,0.056c-5.533,0.145-7.748-0.078-11.255,4.109C213.513,283.27,213.018,282.512,212.89,281.777z')
+						.col-md-5
+							#provinceInfo
+								img(src='images/ventanilla.jpg', alt='A beach boardwalk through pink grass')
+								h1 Omar Marcos Arteaga, alcalde de Ventanilla
+								p
+									| Renunció a Chimpum en el 2015, alegando falta de apoyo del Gobierno Regional, pero otro motivo sería que la alianza electoral con Vamos Perú evitó que tiente la alcaldía provincial. Alista su movimiento Fuerza Chalaca con miras a la provincial. Es investigado por presunto enriquecimiento ilícito: según un fiscal, tiene desbalance patrimonial de unos 663 mil soles.
+		
+		footer
+			.container
+				.row
+					.col-md-6
+						.logo-creditos
+							img(src='images/logo-callao-01.png', width='50%')
+							hr
+							img(src='images/logo_lr.png', width='200px')
+
+					.col-md-6
+						h4 Periodista
+						a(href="https://twitter.com/dperedaz")
+							p David pereda
+
+						h4 Diseño y Desarrollo web
+						a(href="https://twitter.com/solcuya")
+							p Tania Cuya
+
+						h4 Inofografista
+						a(href="http://infosaleman.blogspot.pe/")
+							p Luis Alemán
+
+		script(src='./js/jquery.min.js')
+		script(src='./js/wow.js')
+		script(type='text/javascript', src='js/bootstrap.js')
+		script(type='text/javascript', src='js/main.js')
+
+
+
+
