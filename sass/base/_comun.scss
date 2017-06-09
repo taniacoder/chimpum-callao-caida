@@ -48,7 +48,7 @@ section h2 {
 }
 p {
     font-size: 17px;
-    line-height: 1.7;
+    line-height: 1.5;
     margin-bottom: 20px;
 }
 
@@ -210,6 +210,8 @@ footer {
 /*---*/
 #canada-map { 
   fill: hsl(120, 55%, 40%);
+      width: 586px;
+    height: 594px;
 }
 #canada-map g {
   transition: .3s;
@@ -254,12 +256,12 @@ footer {
   }
 }
 #provinceInfo.show { opacity: 1; }
-#provinceInfo h1 {
+#provinceInfo h3 {
   background: #333333;
   color: #fff;
   padding: .3rem;
   padding-left: 1rem;
-  margin-top: -.5rem;
+  margin-top: 0rem;
   font-weight: 400;
 }
 #provinceInfo p {

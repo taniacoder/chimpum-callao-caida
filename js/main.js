@@ -64,30 +64,20 @@ var canadamap = document.getElementById("canada-map"),
     sourceImg = province.querySelector("img"),
     imgPath = "images/";
     provinceInfo.innerHTML = "";
-    provinceInfo.insertAdjacentHTML("afterbegin", "<img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h1>"+provinceName+"</h1><p>"+provincePara.innerHTML+"</p>");
+    provinceInfo.insertAdjacentHTML("afterbegin", "<img src="+imgPath + sourceImg.getAttribute('xlink:href')+" alt='"+sourceImg.getAttribute('alt')+"'><h3>"+provinceName+"</h3><p>"+provincePara.innerHTML+"</p>");
     provinceInfo.classList.add("show");
     }
   })
 
 ///hi
-var chart = Highcharts.chart('container', {
-
-    chart: {
-        type: 'column'
-    },
+Highcharts.chart('container', {
 
     title: {
-        text: 'Highcharts responsive chart'
+        text: 'Votaciones para alcalde provincial'
     },
 
     subtitle: {
-        text: 'Resize the frame or click buttons to change appearance'
-    },
-
-    legend: {
-        align: 'right',
-        verticalAlign: 'middle',
-        layout: 'vertical'
+        text: 'Chimpum viene ganando seis elecciones consecutivas.'
     },
 
     xAxis: {
@@ -96,74 +86,56 @@ var chart = Highcharts.chart('container', {
             x: -10
         }
     },
-
     yAxis: {
-        allowDecimals: false,
         title: {
             text: 'Percent'
         }
     },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
 
     series: [{
         name: 'ChimpumCallao',
         data: [57.9, 67.2, 30.8, 48.9, 47.1, 39.3],
-        color: '#578848'
-    }, {
-        name: 'Otro',
-        data: [36.9, 15.9, 23.7, 19.3, 22.9, 17.6],
-        color: '#ccc'
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    align: 'center',
-                    verticalAlign: 'bottom',
-                    layout: 'horizontal'
-                },
-                yAxis: {
-                    labels: {
-                        align: 'left',
-                        x: 0,
-                        y: -5
-                    },
-                    title: {
-                        text: null
-                    }
-                },
-                subtitle: {
-                    text: null
-                },
-                credits: {
-                    enabled: false
-                }
-            }
-        }]
-    }
+        color:'#10ad22'
+    },     {
+        name: 'Cambio 90',
+        data: [36.9, null, null, null, null, null],
+        color: '#E87743'
+     },
+     {
+        name: 'Vamos Vecino',
+        data: [null, 15.9, null, null, null, null],
+        color: '#0000F3'
+     },
+     {
+        name: 'APRA ',
+        data: [null, null, 23.7, null, null, null],
+        color: '#FE0002'
+    },
+     {
+        name: 'Mar Callao',
+        data: [null, null, null, 19.3, 17.6, null],
+        color: '#0395CE'
+     },
+     {
+        name: 'Por Ti Callao ',
+        data: [null, null, null, null, null, 17.6],
+        color: '#DD2773'
+   }]
 });
-
   ///hi
   Highcharts.chart('container-1', {
-    chart: {
-        type: 'column'
-    },
-
     title: {
-        text: 'Highcharts responsive chart'
+        text: 'Votaciones para gobernador regional'
     },
 
     subtitle: {
-        text: 'Resize the frame or click buttons to change appearance'
-    },
-
-    legend: {
-        align: 'right',
-        verticalAlign: 'middle',
-        layout: 'vertical'
+        text: 'Chimpum ha ganado tres sufragios de las cuatro.'
     },
 
     xAxis: {
@@ -172,56 +144,40 @@ var chart = Highcharts.chart('container', {
             x: -10
         }
     },
-
     yAxis: {
-        allowDecimals: false,
         title: {
             text: 'Percent'
         }
     },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
 
     series: [{
         name: 'ChimpumCallao',
         data: [20, 49.6, 49.8, 39.6],
-        color: '#578848'
-    }, {
-        name: 'Otro',
-        data: [ 24.1, 33.4, 30.9, 21.2],
-        color: '#ccc'
-    }, {
+        color:'#10ad22'
+    },     {
         name: 'Peru Posible',
-        data: [ 27, null, null , null],
-        color: '#ccc'
-    }],
-
-    responsive: {
-        rules: [{
-            condition: {
-                maxWidth: 500
-            },
-            chartOptions: {
-                legend: {
-                    align: 'center',
-                    verticalAlign: 'bottom',
-                    layout: 'horizontal'
-                },
-                yAxis: {
-                    labels: {
-                        align: 'left',
-                        x: 0,
-                        y: -5
-                    },
-                    title: {
-                        text: null
-                    }
-                },
-                subtitle: {
-                    text: null
-                },
-                credits: {
-                    enabled: false
-                }
-            }
-        }]
-    }
+        data: [36.9, null, null, null],
+        color: '#FECE02'
+     },
+     {
+        name: 'APRA ',
+        data: [24.1, null, null, null],
+        color: '#FE0002'
+    },
+     {
+        name: 'Mar Callao',
+        data: [null, 33.4, 30.9, null],
+        color: '#0395CE'
+     },
+     {
+        name: 'Accion Popular ',
+        data: [ null, null, null,  21.2],
+        color: '#DD2773'
+   }]
 });
