@@ -35,7 +35,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #10ad22;
+    color: #ccc;
     outline: 0;
 }
 
@@ -279,7 +279,10 @@ footer {
 }
 
 /*hober svg*/
-
+/*organigrama*/
+#two {
+  padding: 5% 0 1%;
+}
 svg #Capa_5,#Capa_6,#Capa_7,#Capa_8,
 #Capa_9,#Capa_10,#Capa_11,#Capa_12,#Capa_13,#Capa_14 {
         opacity:0;
@@ -287,3 +290,4 @@ svg #Capa_5,#Capa_6,#Capa_7,#Capa_8,
             opacity:1;
         }
     }
+

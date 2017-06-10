@@ -7,6 +7,7 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import 'https://fonts.googleapis.com/css?family=Roboto+Slab';
 @import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Roboto:700';
 @import 'https://fonts.googleapis.com/css?family=Cabin';
 @import 'https://fonts.googleapis.com/css?family=Droid+Serif';
 @import url(https://fonts.googleapis.com/css?family=Questrial);
@@ -6001,7 +6002,7 @@ a {
 
 a:hover,
 a:focus {
-  color: #10ad22;
+  color: #ccc;
   outline: 0; }
 
 h1, h2, h3, h4, h5, h6, tspan {
@@ -6208,6 +6209,10 @@ footer {
   width: 100%; }
 
 /*hober svg*/
+/*organigrama*/
+#two {
+  padding: 5% 0 1%; }
+
 svg #Capa_5, #Capa_6, #Capa_7, #Capa_8,
 #Capa_9, #Capa_10, #Capa_11, #Capa_12, #Capa_13, #Capa_14 {
   opacity: 0; }

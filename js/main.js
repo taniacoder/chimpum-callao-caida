@@ -77,7 +77,7 @@ Highcharts.chart('container', {
     },
 
     subtitle: {
-        text: 'Chimpum viene ganando seis elecciones consecutivas.'
+        text: '(Chimpum y rivales más cercanos)'
     },
 
     xAxis: {
@@ -135,7 +135,7 @@ Highcharts.chart('container', {
     },
 
     subtitle: {
-        text: 'Chimpum ha ganado tres sufragios de las cuatro.'
+        text: '(Chimpum y rivales más cercanos)'
     },
 
     xAxis: {
