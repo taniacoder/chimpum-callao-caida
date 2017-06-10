@@ -99,7 +99,7 @@ Highcharts.chart('container', {
 
 
     series: [{
-        name: 'ChimpumCallao',
+        name: 'Chimpum Callao',
         data: [57.9, 67.2, 30.8, 48.9, 47.1, 39.3],
         color:'#10ad22'
     },     {
@@ -157,11 +157,11 @@ Highcharts.chart('container', {
 
 
     series: [{
-        name: 'ChimpumCallao',
+        name: 'Chimpum Callao',
         data: [20, 49.6, 49.8, 39.6],
         color:'#10ad22'
     },     {
-        name: 'Peru Posible',
+        name: 'Perú Posible',
         data: [36.9, null, null, null],
         color: '#FECE02'
      },
@@ -176,7 +176,7 @@ Highcharts.chart('container', {
         color: '#0395CE'
      },
      {
-        name: 'Accion Popular ',
+        name: 'Acción Popular ',
         data: [ null, null, null,  21.2],
         color: '#DD2773'
    }]

@@ -6139,6 +6139,7 @@ footer {
 
 /*---*/
 #canada-map {
+  padding-top: 50px;
   fill: #2e9e2e;
   width: 586px;
   height: 594px; }
@@ -6160,7 +6161,7 @@ footer {
 
 #last h2 {
   text-align: center;
-  padding: 0 0 50px; }
+  padding: 0 0 7px; }
 
 #provinceInfo {
   /*position: absolute;
