@@ -340,3 +340,28 @@ svg #Capa_5,#Capa_6,#Capa_7,#Capa_8,
   display: block;
 }
 }
+
+/***VIDEO****///
+
+iframe {
+  width: 560;
+  height: 315;
+
+}
+
+@media (max-width:620px) {
+iframe {
+    width: 425px;
+    height: 230px;
+
+}
+}
+
+@media (max-width:420px) {
+iframe {
+
+    width: 288px;
+    height: 200px;
+
+}
+}
