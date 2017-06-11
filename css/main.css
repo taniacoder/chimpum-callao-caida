@@ -6098,7 +6098,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 9px;
+  padding-top: 16px;
   padding-bottom: 15px; }
 
 .btn-redes .share-buttons-square {
@@ -6132,6 +6132,21 @@ footer {
   text-align: center;
   padding: 10px 0 20px; }
 
+.line-md, .line-xs {
+  display: none; }
+
+@media (max-width: 1024px) {
+  .line-lg {
+    display: none; }
+  .line-md {
+    display: block; } }
+
+@media (max-width: 600px) {
+  .line-md {
+    display: none; }
+  .line-xs {
+    display: block; } }
+
 /**/
 /*map*/
 .mapa {
@@ -6157,7 +6172,7 @@ footer {
 
 #canada-map path {
   stroke: #fff;
-  stroke-width: 2.5px; }
+  /*stroke-width: 2.5px;*/ }
 
 #last h2 {
   text-align: center;
@@ -6209,6 +6224,11 @@ footer {
 #four img {
   width: 100%; }
 
+@media (max-width: 1024px) {
+  #canada-map {
+    width: 400px;
+    height: 594px; } }
+
 /*hober svg*/
 /*organigrama*/
 #two {
@@ -6220,3 +6240,16 @@ svg #Capa_5, #Capa_6, #Capa_7, #Capa_8,
   svg #Capa_5:hover, #Capa_6:hover, #Capa_7:hover, #Capa_8:hover,
   #Capa_9:hover, #Capa_10:hover, #Capa_11:hover, #Capa_12:hover, #Capa_13:hover, #Capa_14:hover {
     opacity: 1; }
+
+.organi-responsive {
+  display: none; }
+
+@media (max-width: 1024px) {
+  .organi-lg svg {
+    width: 700px; } }
+
+@media (max-width: 800px) {
+  .organi-lg {
+    display: none; }
+  .organi-responsive {
+    display: block; } }
